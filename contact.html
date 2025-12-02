@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <meta name="description" content="The home page for Sabrina Yu's Web Portfolio."/>
+    <link rel="stylesheet" href="css/html5reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
+      <!-- <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"> -->
+      <nav>
+        <ul>
+          <li><a href = "projects.html">Projects</a></li>
+          <li><a href = "about.html">About</a></li>
+          <li><a href = "contact.html">Contact</a></li>
+          <li><a href = "resume.html">Resume</a></li>
+          <li><a href = "more.html">More Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>CONTACT ME</h1>
+    <section>
+      <p>
+        Ann Arbor, MI
+      </p>
+      <p>
+        +1 (585) 643-9310
+      </p>
+      <p>
+        Email
+      </p>
+      <p>
+        LinkedIn
+      </p>
+      <p>
+        Linktree
+      </p>
+    </section>
+
+<section id="contact">
+    <h1>Send me a Message! :D</h1>
+    <form onsubmit="event.preventDefault(); alert('Message sent! (demo)'); this.reset();">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+  <p>© Copyrights <span id="year"></span> Sabrina Yu. All rights reserved.</p>
+  <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+</footer>
+</body>
+</html>
