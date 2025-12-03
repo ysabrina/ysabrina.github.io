@@ -28,42 +28,54 @@
   --font-family: "Manrope", sans-serif;
   --font-weight-strong: 550;
   --font-size-h1: 10rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1rem;
-  --font-size-text: 1rem;
-  --border-radius: 8px;
 }
 
 html {
   overflow-x: hidden;
 }
-/* HEADINGS */
+/* HEADINGS N STUFF*/
 h1 {
   font-size: 5rem;
   text-align: center;
   font-family: var(--font-family);
-  margin: 20rem 0rem 20rem 0rem;
-  line-height: 6rem;
+  margin: 15rem 0rem 1.5rem 0rem;
+  line-height: 1;
 }
 
 h1 strong {
   font-size: 5.5rem;
-  text-align: center;
   font-family:"SwearBanner", serif;
-  margin: 20rem 0rem 20rem 0rem;
-  line-height: 6rem;
 }
+
+#short_intro {
+  margin: 0rem 0rem 15rem 0rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
 
 /* MAIN BODY STUFF */
 
 body {
   margin: 1rem;
   font-family: var(--font-family);
-  line-height: 1.25rem;
+  line-height: 1.5;
+  font-size: 2rem;
 }
 
-/* gradient */
+#sabpic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* gradient - MAKE SURE TO ADD PREFERS REDUCED MOTION LATER */
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
