@@ -6,7 +6,15 @@
   font-weight: normal;
   font-optical-sizing: auto;
   src:url("../../fonts/swear-font-family/SwearBannerDemo-MediumCilati.otf") format("opentype");
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: normal;
+  font-optical-sizing: auto;
+  src:url("../../fonts/Manrope/static/Manrope-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -17,7 +25,7 @@
   --color-background: white;
   --color-text: #131516;
   --color-anchor: #00274C;
-  --font-family: "SwearBanner", serif;
+  --font-family: "Manrope", sans-serif;
   --font-weight-strong: 550;
   --font-size-h1: 10rem;
   --font-size-h2: 2rem;
@@ -30,12 +38,29 @@
 html {
   overflow-x: hidden;
 }
-
+/* HEADINGS */
 h1 {
-  font-size: var(--font-size-h1);
-  font-size: clamp(2rem, 7vw, var(--font-size-h1));
+  font-size: 5rem;
   text-align: center;
   font-family: var(--font-family);
+  margin: 20rem 0rem 20rem 0rem;
+  line-height: 6rem;
+}
+
+h1 strong {
+  font-size: 5.5rem;
+  text-align: center;
+  font-family:"SwearBanner", serif;
+  margin: 20rem 0rem 20rem 0rem;
+  line-height: 6rem;
+}
+
+/* MAIN BODY STUFF */
+
+body {
+  margin: 1rem;
+  font-family: var(--font-family);
+  line-height: 1.25rem;
 }
 
 /* gradient */
@@ -57,3 +82,88 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+/* NAV BAR STUFF */
+nav {
+  display: block;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0.25rem;
+}
+
+nav ul a {
+  display: inline-grid;
+  padding:0rem .5rem 0rem .5rem;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav ul a::before {
+  width: 100%;
+  height: 0.25em;
+  background-color: var(--color-secondary);
+  opacity: 0.15;
+  content: "";
+}
+nav ul a:hover::before, nav ul a:focus::before {
+  opacity: 1;
+
+}
+
+.skip a{
+  position: absolute;
+  top: -100px;
+  background-color: white;
+  overflow: hidden;
+  color: #00274C;
+
+}
+.skip a:focus {
+  top: 25px;
+  padding: 0.5%;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+ @media screen and (min-width: 825px) 
+ /* desktop view!!!!!!! YAAAAY */
+ {
+
+  /* headings */
+  h1 {
+    font-size: var(--font-size-h1);
+    text-align: center;
+    font-family: var(--font-family);
+    margin: 5rem 0rem 0rem 0rem;
+  }
+
+  /* MAIN BODY STUFF */
+  body {
+    margin: 2rem;
+  }
+
+   /* nav bar */
+    nav ul a {
+    display: inline-grid;
+    padding:.5rem 1rem .5rem 1rem;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  nav ul a::before {
+    width: 100%;
+    height: 0.25em;
+    background-color: var(--color-secondary);
+    opacity: 0.15;
+    content: "";
+  }
+
+ }
