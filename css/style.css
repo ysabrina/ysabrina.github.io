@@ -47,6 +47,11 @@ h1 strong {
   font-family:"SwearBanner", serif;
 }
 
+h2 strong {
+  font-size: 3.5rem;
+  font-family:"SwearBanner", serif;
+}
+
 #short_intro {
   margin: 0rem 0rem 15rem 0rem;
   text-align: center;
@@ -54,15 +59,15 @@ h1 strong {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 footer p {
@@ -81,7 +86,24 @@ body {
   font-size: 1.5rem;
 }
 
-#sabpic {
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.project p {
+  margin-top: 0.75rem;
+  margin-bottom: 5rem;
+
+}
+
+.sabpic {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -90,11 +112,12 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
-/* gradient - MAKE SURE TO ADD PREFERS REDUCED MOTION LATER */
+
+/* gradient */
 body {
 	background: linear-gradient(-45deg, #ff9751, #98f5e5, #5535e6);
-	background-size: 1000% 1000%;
-	animation: gradient 30s ease infinite;
+	background-size: 1000% 2000%;
+	animation: gradient 20s ease infinite;
 	height: 100vh;
 }
 
@@ -191,7 +214,6 @@ nav ul a:hover::before, nav ul a:focus::before {
 
 /* CONTACT FORM STUFF EEEEK */
 
-
 .feedback {
   border-radius: .5rem;
   line-height: 2rem;
@@ -261,15 +283,11 @@ textarea {
     nav ul a {
     display: inline-grid;
     padding:.5rem 1rem .5rem 1rem;
-    color: var(--color-text);
     font-size: 1.5rem;
-    text-decoration: none;
   }
   nav ul a::before {
     width: 100%;
     height: 0.25em;
-    background-color: var(--color-secondary);
-    opacity: 0.15;
     content: "";
   }
 
