@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "SwearBanner";
+  font-style: normal;
+  font-weight: normal;
+  font-optical-sizing: auto;
+  src:url("../../fonts/swear-font-family/SwearBannerDemo-MediumCilati.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: normal;
+  font-optical-sizing: auto;
+  src:url("../../fonts/Manrope/static/Manrope-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --color-primary:#5535e6;;
+  --color-primary-alt: #6f6ffd;
+  /*--color-secondary: #FFCB05; */
+  --color-background: white;
+  --color-text: #131516;
+  /*--color-anchor: #00274C;*/
+  --font-family: "Manrope", sans-serif;
+  --font-weight-strong: 550;
+  --font-size-h1: 8rem;
+}
+
+html {
+  overflow-x: hidden;
+}
+/* HEADINGS N STUFF*/
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  font-family: var(--font-family);
+  margin: 10rem 0rem 1.5rem 0rem;
+  line-height: 1;
+}
+
+h1 strong {
+  font-size: 5.5rem;
+  font-family:"SwearBanner", serif;
+}
+
+h2 strong {
+  font-size: 3.5rem;
+  font-family:"SwearBanner", serif;
+}
+
+#short_intro {
+  margin: 0rem 0rem 15rem 0rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* MAIN BODY STUFF */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 1rem;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.project p {
+  margin-top: 0.75rem;
+  margin-bottom: 5rem;
+
+}
+
+.sabpic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* gradient */
+body {
+	background: linear-gradient(-45deg, #ff9751, #98f5e5, #5535e6);
+	background-size: 1000% 2000%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* text fade in stuff hehehehh*/
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* GO BACK TO THIS LATER!!! THE BUTTON DOESNT WORK !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+body.paused {
+  animation-play-state: paused;
+}
+
+#pauseButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+#pauseButton:hover {
+  background: rgba(255, 255, 255, 1);
+}
+#main {
+  animation: 1.5s fadein;
+}
+
+/* REDUCED MOTION STUFF */
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      animation: none;
+      transition: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #main {
+      animation: none;
+      transition: none;
+    }
+  }
+
+/* NAV BAR STUFF */
+nav {
+  display: block;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0.25rem;
+}
+
+nav ul a {
+  display: inline-grid;
+  padding:0rem .5rem 0rem .5rem;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav ul a::before {
+  width: 100%;
+  height: 0.25em;
+  background-color: var(--color-primary);
+  opacity: 0.15;
+  content: "";
+}
+nav ul a:hover::before, nav ul a:focus::before {
+  opacity: 1;
+
+}
+
+/* SKIP TO MAIN STUFF */
+.skip a{
+  position: absolute;
+  top: -100px;
+  background-color: white;
+  overflow: hidden;
+  color: #00274C;
+
+}
+.skip a:focus {
+  top: 25px;
+  padding: 0.5%;
+}
+
+/* CONTACT FORM STUFF EEEEK */
+
+.feedback {
+  border-radius: .5rem;
+  line-height: 2rem;
+  background-color: transparent;
+  border: .1rem solid var(--color-text);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  
+}
+
+.feedback:focus {
+  border: .1rem solid var(--color-primary);;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: var(--color-primary);
+  border-radius: .5rem;
+  border:0;
+  color:white;
+  font-size:1.5rem;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+}
+
+[type="submit"]:hover {
+  background:var(--color-primary-alt);
+}
+
+::placeholder {
+  color: var(--color-text);
+  opacity: 1;
+  font-family: var(--font-family);
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+ @media screen and (min-width: 825px) 
+ /* desktop view!!!!!!! YAAAAY */
+ {
+
+  /* headings */
+  h1 {
+    font-size: var(--font-size-h1);
+    text-align: center;
+    font-family: var(--font-family);
+    margin: 12.5rem 0rem 1rem 0rem;
+  }
+  h1 strong {
+  font-size: 8rem;
+}
+
+
+  /* MAIN BODY STUFF */
+  body {
+    margin: 2rem;
+  }
+
+   /* nav bar */
+    nav ul a {
+    display: inline-grid;
+    padding:.5rem 1rem .5rem 1rem;
+    font-size: 1.5rem;
+  }
+  nav ul a::before {
+    width: 100%;
+    height: 0.25em;
+    content: "";
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+ }
