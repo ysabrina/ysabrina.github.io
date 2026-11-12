@@ -21,13 +21,13 @@
 :root {
   --color-primary:#5535e6;;
   --color-primary-alt: #6f6ffd;
-  --color-secondary: #FFCB05;
+  /*--color-secondary: #FFCB05; */
   --color-background: white;
   --color-text: #131516;
-  --color-anchor: #00274C;
+  /*--color-anchor: #00274C;*/
   --font-family: "Manrope", sans-serif;
   --font-weight-strong: 550;
-  --font-size-h1: 10rem;
+  --font-size-h1: 8rem;
 }
 
 html {
@@ -38,7 +38,7 @@ h1 {
   font-size: 5rem;
   text-align: center;
   font-family: var(--font-family);
-  margin: 15rem 0rem 1.5rem 0rem;
+  margin: 10rem 0rem 1.5rem 0rem;
   line-height: 1;
 }
 
@@ -117,7 +117,7 @@ body {
 body {
 	background: linear-gradient(-45deg, #ff9751, #98f5e5, #5535e6);
 	background-size: 1000% 2000%;
-	animation: gradient 20s ease infinite;
+	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
 
@@ -144,6 +144,28 @@ body {
   }
 }
 
+/* GO BACK TO THIS LATER!!! THE BUTTON DOESNT WORK !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+body.paused {
+  animation-play-state: paused;
+}
+
+#pauseButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+#pauseButton:hover {
+  background: rgba(255, 255, 255, 1);
+}
 #main {
   animation: 1.5s fadein;
 }
@@ -271,8 +293,12 @@ textarea {
     font-size: var(--font-size-h1);
     text-align: center;
     font-family: var(--font-family);
-    margin: 5rem 0rem 0rem 0rem;
+    margin: 12.5rem 0rem 1rem 0rem;
   }
+  h1 strong {
+  font-size: 8rem;
+}
+
 
   /* MAIN BODY STUFF */
   body {
@@ -292,8 +318,11 @@ textarea {
   }
 
   .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 15px auto;
   }
- }
+}
